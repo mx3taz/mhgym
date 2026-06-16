@@ -95,12 +95,14 @@ a {
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 /* ---------- Accessibility ---------- */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -186,12 +188,10 @@ ul, ol {
 
 /* Metallic Chrome Text Gradient */
 .text-chrome {
-  background: linear-gradient(
-    180deg,
-    var(--chrome-shine) 0%,
-    var(--chrome) 40%,
-    var(--chrome-dark) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--chrome-shine) 0%,
+      var(--chrome) 40%,
+      var(--chrome-dark) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -205,7 +205,7 @@ ul, ol {
 .text-crimson-glow {
   color: var(--crimson-bright);
   text-shadow: 0 0 20px var(--crimson-glow),
-               0 0 40px var(--crimson-glow);
+    0 0 40px var(--crimson-glow);
 }
 
 /* ---------- Section Label ---------- */
@@ -243,24 +243,24 @@ ul, ol {
 
 .reveal-left {
   opacity: 0;
-  transform: translateX(-80px);
+  transform: translateY(-80px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 .reveal-left.revealed {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .reveal-right {
   opacity: 0;
-  transform: translateX(80px);
+  transform: translateY(80px);
   transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
 .reveal-right.revealed {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .reveal-scale {
@@ -275,12 +275,29 @@ ul, ol {
 }
 
 /* Stagger children */
-.stagger-children .reveal:nth-child(1) { transition-delay: 0s; }
-.stagger-children .reveal:nth-child(2) { transition-delay: 0.1s; }
-.stagger-children .reveal:nth-child(3) { transition-delay: 0.2s; }
-.stagger-children .reveal:nth-child(4) { transition-delay: 0.3s; }
-.stagger-children .reveal:nth-child(5) { transition-delay: 0.4s; }
-.stagger-children .reveal:nth-child(6) { transition-delay: 0.5s; }
+.stagger-children .reveal:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.stagger-children .reveal:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.stagger-children .reveal:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.stagger-children .reveal:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.stagger-children .reveal:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.stagger-children .reveal:nth-child(6) {
+  transition-delay: 0.5s;
+}
 
 /* ============================================================
    NAVIGATION
@@ -459,7 +476,7 @@ ul, ol {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: 
+  background:
     radial-gradient(ellipse at center, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.85) 70%),
     linear-gradient(180deg, transparent 60%, var(--black-deep) 100%);
   z-index: 2;
@@ -497,10 +514,9 @@ ul, ol {
   width: clamp(120px, 20vw, 220px);
   height: auto;
   margin: 0 auto var(--space-md);
-  filter: drop-shadow(0 0 30px var(--crimson-glow)) 
-          drop-shadow(0 0 60px rgba(196, 30, 42, 0.15));
+  filter: drop-shadow(0 0 30px var(--crimson-glow)) drop-shadow(0 0 60px rgba(196, 30, 42, 0.15));
   animation: heroLogoReveal 1.5s var(--ease-out-expo) forwards,
-             logoFloat 6s ease-in-out 2s infinite;
+    logoFloat 6s ease-in-out 2s infinite;
   opacity: 0;
   transform: scale(0.7) translateY(30px);
 }
@@ -512,13 +528,11 @@ ul, ol {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   line-height: 0.9;
-  background: linear-gradient(
-    180deg,
-    var(--chrome-shine) 0%,
-    var(--chrome) 35%,
-    var(--chrome-dark) 80%,
-    rgba(107, 107, 107, 0.5) 100%
-  );
+  background: linear-gradient(180deg,
+      var(--chrome-shine) 0%,
+      var(--chrome) 35%,
+      var(--chrome-dark) 80%,
+      rgba(107, 107, 107, 0.5) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -537,11 +551,11 @@ ul, ol {
   color: var(--crimson);
   margin-top: var(--space-xs);
   animation: heroSubReveal 1s var(--ease-out-expo) 0.6s forwards,
-             crimsonPulse 3s ease-in-out 2s infinite;
+    crimsonPulse 3s ease-in-out 2s infinite;
   opacity: 0;
   transform: translateY(30px);
   text-shadow: 0 0 20px var(--crimson-glow),
-               0 0 60px var(--crimson-glow);
+    0 0 60px var(--crimson-glow);
 }
 
 .hero__tagline {
@@ -644,12 +658,11 @@ ul, ol {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, 
-    transparent 0%, 
-    var(--crimson) 10%, 
-    var(--crimson) 90%, 
-    transparent 100%
-  );
+  background: linear-gradient(180deg,
+      transparent 0%,
+      var(--crimson) 10%,
+      var(--crimson) 90%,
+      transparent 100%);
   transform: translateX(-50%);
 }
 
@@ -766,9 +779,9 @@ ul, ol {
   text-align: center;
   overflow: hidden;
   transform-style: preserve-3d;
-  transition: transform var(--transition-medium), 
-              border-color var(--transition-medium),
-              box-shadow var(--transition-medium);
+  transition: transform var(--transition-medium),
+    border-color var(--transition-medium),
+    box-shadow var(--transition-medium);
   cursor: default;
 }
 
@@ -789,10 +802,9 @@ ul, ol {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-    var(--crimson-glow) 0%, 
-    transparent 60%
-  );
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      var(--crimson-glow) 0%,
+      transparent 60%);
   opacity: 0;
   transition: opacity var(--transition-medium);
   pointer-events: none;
@@ -802,7 +814,7 @@ ul, ol {
   transform: translateY(-8px) rotateX(2deg);
   border-color: rgba(196, 30, 42, 0.2);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
-              0 0 30px var(--crimson-glow);
+    0 0 30px var(--crimson-glow);
 }
 
 .feature-card:hover::before {
@@ -934,14 +946,53 @@ ul, ol {
   animation: particleFloat 8s linear infinite;
 }
 
-.particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 7s; }
-.particle:nth-child(2) { left: 20%; animation-delay: 1s; animation-duration: 9s; }
-.particle:nth-child(3) { left: 35%; animation-delay: 2s; animation-duration: 6s; }
-.particle:nth-child(4) { left: 50%; animation-delay: 0.5s; animation-duration: 8s; }
-.particle:nth-child(5) { left: 65%; animation-delay: 3s; animation-duration: 10s; }
-.particle:nth-child(6) { left: 75%; animation-delay: 1.5s; animation-duration: 7s; }
-.particle:nth-child(7) { left: 85%; animation-delay: 2.5s; animation-duration: 9s; }
-.particle:nth-child(8) { left: 95%; animation-delay: 0.8s; animation-duration: 6s; }
+.particle:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+  animation-duration: 9s;
+}
+
+.particle:nth-child(3) {
+  left: 35%;
+  animation-delay: 2s;
+  animation-duration: 6s;
+}
+
+.particle:nth-child(4) {
+  left: 50%;
+  animation-delay: 0.5s;
+  animation-duration: 8s;
+}
+
+.particle:nth-child(5) {
+  left: 65%;
+  animation-delay: 3s;
+  animation-duration: 10s;
+}
+
+.particle:nth-child(6) {
+  left: 75%;
+  animation-delay: 1.5s;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(7) {
+  left: 85%;
+  animation-delay: 2.5s;
+  animation-duration: 9s;
+}
+
+.particle:nth-child(8) {
+  left: 95%;
+  animation-delay: 0.8s;
+  animation-duration: 6s;
+}
 
 /* ============================================================
    STATS SECTION
@@ -1219,9 +1270,9 @@ ul, ol {
   color: var(--chrome-dark);
   padding: 0.5rem 1rem;
   border: 1px solid rgba(184, 184, 184, 0.1);
-  transition: color var(--transition-fast), 
-              border-color var(--transition-fast),
-              box-shadow var(--transition-fast);
+  transition: color var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .owner__social-link:hover {
@@ -1247,7 +1298,7 @@ ul, ol {
   justify-content: center;
   min-height: 80vh;
   overflow: hidden;
-  background: 
+  background:
     radial-gradient(ellipse at 30% 50%, rgba(196, 30, 42, 0.08) 0%, transparent 50%),
     radial-gradient(ellipse at 70% 50%, rgba(196, 30, 42, 0.05) 0%, transparent 50%),
     var(--black-surface);
@@ -1295,8 +1346,8 @@ ul, ol {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: transform var(--transition-fast), 
-              box-shadow var(--transition-fast);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
   text-decoration: none;
 }
 
@@ -1455,10 +1506,10 @@ ul, ol {
   visibility: hidden;
   transform: translateY(20px);
   transition: opacity var(--transition-fast),
-              visibility var(--transition-fast),
-              transform var(--transition-fast),
-              background var(--transition-fast),
-              border-color var(--transition-fast);
+    visibility var(--transition-fast),
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .footer__back-to-top.visible {
@@ -1517,28 +1568,37 @@ ul, ol {
 }
 
 @keyframes logoFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-8px);
   }
 }
 
 @keyframes crimsonPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 0 0 20px var(--crimson-glow), 0 0 60px var(--crimson-glow);
   }
+
   50% {
     text-shadow: 0 0 30px var(--crimson-glow-strong), 0 0 80px var(--crimson-glow);
   }
 }
 
 @keyframes scrollPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
     transform: scaleY(1);
   }
+
   50% {
     opacity: 1;
     transform: scaleY(1.3);
@@ -1551,12 +1611,15 @@ ul, ol {
     transform: translateY(100%) translateX(0);
     opacity: 0;
   }
+
   10% {
     opacity: 0.6;
   }
+
   90% {
     opacity: 0.6;
   }
+
   100% {
     transform: translateY(-100vh) translateX(30px);
     opacity: 0;
@@ -1564,10 +1627,13 @@ ul, ol {
 }
 
 @keyframes ctaGlowPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.3;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(1.2);
@@ -1595,6 +1661,7 @@ ul, ol {
   .nav__links {
     display: none;
     position: fixed;
+    height: 100vh;
     top: 0;
     left: 0;
     right: 0;
@@ -1710,5 +1777,9 @@ ul, ol {
   .cta__button {
     width: 100%;
     max-width: 300px;
+  }
+
+  .owner__social {
+    flex-direction: column !important;
   }
 }
